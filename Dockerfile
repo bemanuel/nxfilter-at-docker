@@ -8,7 +8,7 @@ RUN mkdir -p /nxfilter/skins && unzip /usr/local/${NXF_ZIP} -d /nxfilter && rm /
 
 WORKDIR /nxfilter/bin
 
-RUN /usr/bin/git clone https://github.com/bemanuel/nxfskinbr.git /usr/local/nxfskinbr && mv /usr/local/nxfskinbr/skins/nxfskinbr /nxfilter/skins/. && apk del git curl unzip && rm -rf /usr/local/nxfskinbr
+#RUN /usr/bin/git clone https://github.com/bemanuel/nxfskinbr.git /usr/local/nxfskinbr && mv /usr/local/nxfskinbr/skins/nxfskinbr /nxfilter/skins/. && apk del git curl unzip && rm -rf /usr/local/nxfskinbr
 
 EXPOSE 53 80 443 514 2055 19001 19002 19003 19004 19005
 ENTRYPOINT ["/nxfilter/bin/startup.sh"]
